@@ -39,5 +39,8 @@ public class CustomerService {
     }
 
 
+    public Customer findCustomerLatest() {
+        return customerRepository.findCustomerLatest();
+    }
 
 }

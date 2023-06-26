@@ -69,7 +69,15 @@ public class CustomerController {
     }
 
 
+    @GetMapping("/customerLatest")
+    public ResponseEntity<Customer> findCustomerLatest() {
+        Customer customer = customerService.findCustomerLatest();
 
+        if (customer == null) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok().body(customer);
+    }
 
 
 }

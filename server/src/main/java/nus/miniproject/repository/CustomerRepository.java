@@ -33,6 +33,10 @@ public class CustomerRepository {
     private final String SQL_SELECT_ALL_CUSTOMER = """
         select * from customer
         """;
+    
+    private final String SQL_SELECT_LATEST = """
+            select * from customer order by id desc limit 1;
+            """;
 
     // GET customer by id    
     private final String SQL_SELECT_CUSTOMER_BY_ID = """
@@ -134,8 +138,10 @@ public class CustomerRepository {
     }
 
 
-
-
+    public Customer findCustomerLatest() {
+        Customer customer = jdbcTemplate.queryForObject(SQL_SELECT_LATEST, BeanPropertyRowMapper.newInstance(Customer.class));
+        return customer;
+    }
 
 
 

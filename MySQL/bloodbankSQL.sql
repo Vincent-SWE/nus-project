@@ -50,6 +50,7 @@
 -- select * from customer;
 -- select * from customer where id = 5; 
 -- select * from customer where first_name = 'charlie';
+-- select * from customer order by id desc limit 1;
 
 -- Update (Update) -----
 -- update customer set last_name = 'Foxtrot Foxtrot' where id = 3;
@@ -99,8 +100,9 @@
 -- insert into appointments (customer_id, outlets_id, appointments_date) values (4, 4, "2023-04-04");
 
 -- ----- Select (READ) -----
--- select * from appointments;
-select * from appointments where id = 2;
+select * from appointments;
+-- select * from appointments where id = 2;
+
 
 -- ----- Update (Update) -----
 -- update appointments set appointments_date = "2023-06-12" where id = 1;
@@ -121,11 +123,17 @@ select * from appointments where id = 2;
 -- inner join outlets as outt on outt.id = appt.outlets_id
 
 -- ----- Complex inner join for customer table and appointments table by ID -----
+-- select cust.id as customer_id, outt.id as outlets_id, cust.first_name, cust.last_name, outt.building_name, outt.address, appt.appointments_date
+-- from customer as cust
+-- inner join appointments as appt on cust.id = appt.customer_id
+-- inner join outlets as outt on outt.id = appt.outlets_id
+-- where appt.id = 9;
+
+-- ----- Complex inner join for customer table and appointments table by customer ID -----
 select cust.id as customer_id, outt.id as outlets_id, cust.first_name, cust.last_name, outt.building_name, outt.address, appt.appointments_date
 from customer as cust
 inner join appointments as appt on cust.id = appt.customer_id
 inner join outlets as outt on outt.id = appt.outlets_id
-where appt.id = 2;
-
+where cust.id = 9;
 
 
