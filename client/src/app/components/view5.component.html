@@ -1,0 +1,46 @@
+<h1>Blood Bank Appointments Booking</h1>
+<mat-divider></mat-divider>
+    <br> 
+        <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="Enter first name here">
+        </mat-form-field>
+    <br>
+        <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Enter last name here">
+        </mat-form-field>
+    <br>
+    <br>
+<h3> Please select a blood bank outlet </h3>
+<mat-form-field>
+    <mat-label>Select a outlet</mat-label>
+    <mat-select>
+        <br>
+        <mat-option> HSA Building, 11 Outram Road </mat-option>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <mat-option> Dhoby Xchange, 11 Orchard Road </mat-option>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <mat-option> Woodlands Civic Centre, 900 South Woodlands Drive </mat-option>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <mat-option>Westgate Tower, 1 Gateway Drive</mat-option>
+        <br>
+    </mat-select>
+</mat-form-field>
+<br>
+<br>
+<h3> Please select an appointment date </h3>
+<mat-form-field>
+    <mat-label>Select a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
