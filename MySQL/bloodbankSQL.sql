@@ -100,7 +100,7 @@
 -- insert into appointments (customer_id, outlets_id, appointments_date) values (4, 4, "2023-04-04");
 
 -- ----- Select (READ) -----
-select * from appointments;
+-- select * from appointments;
 -- select * from appointments where id = 2;
 
 
@@ -130,10 +130,10 @@ select * from appointments;
 -- where appt.id = 9;
 
 -- ----- Complex inner join for customer table and appointments table by customer ID -----
-select cust.id as customer_id, outt.id as outlets_id, cust.first_name, cust.last_name, outt.building_name, outt.address, appt.appointments_date
-from customer as cust
-inner join appointments as appt on cust.id = appt.customer_id
-inner join outlets as outt on outt.id = appt.outlets_id
-where cust.id = 9;
+-- select cust.id as customer_id, outt.id as outlets_id, cust.first_name, cust.last_name, outt.building_name, outt.address, appt.appointments_date
+-- from customer as cust
+-- inner join appointments as appt on cust.id = appt.customer_id
+-- inner join outlets as outt on outt.id = appt.outlets_id
+-- where cust.id = 9;
 
 
