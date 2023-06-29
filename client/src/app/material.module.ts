@@ -37,6 +37,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelect} from '@angular/material/select';
+
 @NgModule({
   exports: [
     CdkTableModule,
@@ -78,6 +81,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatTooltipModule,
     MatTreeModule,
     ScrollingModule,
+    MatFormFieldModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }
