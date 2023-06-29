@@ -18,14 +18,17 @@ export class View0Component {
 
   clickB() {
     console.log('Blood type B was clicked!');
+    this.router.navigate(['/B']);
   }
 
   clickAB() {
     console.log('Blood type AB was clicked!');
+    this.router.navigate(['/AB']);
   }
 
   clickO() {
     console.log('Blood type O was clicked!');
+    this.router.navigate(['/O']);
   }
 
 
